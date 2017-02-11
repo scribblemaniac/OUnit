@@ -48,9 +48,9 @@
        </property>
        <layout class="QGridLayout" name="gridLayout">
         <item row="1" column="0">
-         <widget class="QPushButton" name="pushButton_3">
+         <widget class="QPushButton" name="temperatureButton">
           <property name="text">
-           <string>PushButton</string>
+           <string>Temperature</string>
           </property>
          </widget>
         </item>

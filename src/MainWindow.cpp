@@ -2,6 +2,7 @@
 #include "ui_MainWindow.h"
 
 #include <TemporalFrequencyWidget.h>
+#include <TemperatureWidget.h>
 
 MainWindow::MainWindow(QApplication *app, QWidget *parent) :
     QMainWindow(parent),
@@ -16,8 +17,11 @@ MainWindow::MainWindow(QApplication *app, QWidget *parent) :
     page = new TemporalFrequencyWidget(m_app, this);
     page->hide();
     m_pagesMap.insert(ui->temporalFrequencyButton, page);
-
     connect(ui->temporalFrequencyButton, &QPushButton::clicked, this, &MainWindow::openPage);
+    page = new TemperatureWidget(m_app, this);
+    page->hide();
+    m_pagesMap.insert(ui->temperatureButton, page);
+    connect(ui->temperatureButton, &QPushButton::clicked, this, &MainWindow::openPage);
 
     connect(ui->mainMenuButton, &QPushButton::clicked, this, &MainWindow::returnToMainMenu);
 }

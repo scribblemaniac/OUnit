@@ -1,5 +1,5 @@
-#ifndef FREQUENCYWIDGET_H
-#define FREQUENCYWIDGET_H
+#ifndef TEMPORALFREQUENCYWIDGET_H
+#define TEMPORALFREQUENCYWIDGET_H
 
 #include <QWidget>
 #include <QApplication>
@@ -25,4 +25,4 @@ private:
     QApplication *m_app;
 };
 
-#endif // FREQUENCYWIDGET_H
+#endif // TEMPORALFREQUENCYWIDGET_H
