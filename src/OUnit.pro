@@ -18,14 +18,16 @@ SOURCES += main.cpp\
     TemporalFrequencyWidget.cpp \
     TemperatureWidget.cpp \
     Convert.cpp \
-    ConvertTemperature.cpp
+    ConvertTemperature.cpp \
+    ConvertTemporalFrequency.cpp
 
 HEADERS  += MainWindow.h \
     ConversionUtilities.h \
     TemporalFrequencyWidget.h \
     TemperatureWidget.h \
     Convert.h \
-    ConvertTemperature.h
+    ConvertTemperature.h \
+    ConvertTemporalFrequency.h
 
 FORMS    += MainWindow.ui \
     TemporalFrequencyWidget.ui \

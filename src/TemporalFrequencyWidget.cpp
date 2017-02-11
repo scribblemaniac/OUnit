@@ -32,7 +32,10 @@ TemporalFrequencyWidget::~TemporalFrequencyWidget()
 
 void TemporalFrequencyWidget::updateConversion(const QString &input)
 {
-    ui->oNum->setText(ConversionUtilities::SIConversionString(input, ui->iPrefix->currentText(), ui->oPrefix->currentText()));
+    QStringList inputModifiers, outputModifiers;
+    if(ui->iPrefix->isVisible()) inputModifiers.append(ui->iPrefix->currentText());
+    if(ui->oPrefix->isVisible()) outputModifiers.append(ui->oPrefix->currentText());
+    ui->oNum->setText(QString::number(converter.convert(input.toDouble(), QString("Hertz"), QString("Hertz"), inputModifiers, outputModifiers)));
 }
 
 void TemporalFrequencyWidget::updateKeyboardSpace()

@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QApplication>
 
+#include "ConvertTemporalFrequency.h"
+
 namespace Ui {
 class TemporalFrequencyWidget;
 }
@@ -23,6 +25,8 @@ public slots:
 private:
     Ui::TemporalFrequencyWidget *ui;
     QApplication *m_app;
+
+    ConvertTemporalFrequency converter;
 };
 
 #endif // TEMPORALFREQUENCYWIDGET_H
