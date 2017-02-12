@@ -1,8 +1,9 @@
 #include "MainWindow.h"
 #include "ui_MainWindow.h"
 
-#include <TemporalFrequencyWidget.h>
-#include <TemperatureWidget.h>
+#include "TemporalFrequencyWidget.h"
+#include "TemperatureWidget.h"
+#include "InductanceWidget.h"
 
 MainWindow::MainWindow(QApplication *app, QWidget *parent) :
     QMainWindow(parent),
@@ -22,6 +23,10 @@ MainWindow::MainWindow(QApplication *app, QWidget *parent) :
     page->hide();
     m_pagesMap.insert(ui->temperatureButton, page);
     connect(ui->temperatureButton, &QPushButton::clicked, this, &MainWindow::openPage);
+    page = new InductanceWidget(m_app, this);
+    page->hide();
+    m_pagesMap.insert(ui->inductanceButton, page);
+    connect(ui->inductanceButton, &QPushButton::clicked, this, &MainWindow::openPage);
 
     connect(ui->mainMenuButton, &QPushButton::clicked, this, &MainWindow::returnToMainMenu);
 }

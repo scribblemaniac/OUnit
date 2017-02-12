@@ -88,9 +88,9 @@
          </widget>
         </item>
         <item row="2" column="0">
-         <widget class="QPushButton" name="pushButton_5">
+         <widget class="QPushButton" name="inductanceButton">
           <property name="text">
-           <string>PushButton</string>
+           <string>Inductance</string>
           </property>
          </widget>
         </item>

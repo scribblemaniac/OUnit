@@ -19,7 +19,9 @@ SOURCES += main.cpp\
     TemperatureWidget.cpp \
     Convert.cpp \
     ConvertTemperature.cpp \
-    ConvertTemporalFrequency.cpp
+    ConvertTemporalFrequency.cpp \
+    ConvertInductance.cpp \
+    InductanceWidget.cpp
 
 HEADERS  += MainWindow.h \
     ConversionUtilities.h \
@@ -27,11 +29,14 @@ HEADERS  += MainWindow.h \
     TemperatureWidget.h \
     Convert.h \
     ConvertTemperature.h \
-    ConvertTemporalFrequency.h
+    ConvertTemporalFrequency.h \
+    ConvertInductance.h \
+    InductanceWidget.h
 
 FORMS    += MainWindow.ui \
     TemporalFrequencyWidget.ui \
-    TemperatureWidget.ui
+    TemperatureWidget.ui \
+    InductanceWidget.ui
 
 RESOURCES += \
     Resources.qrc
